@@ -31,10 +31,10 @@ $(document).ready(function() {
       });
     });
 
-    
+
     document.getElementById('btn-api').addEventListener('click', function() {
         // Just call your API here. The header will be sent
     })
 
-    
+
 });
