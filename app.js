@@ -7,7 +7,7 @@ $(document).ready(function() {
     var userProfile;
 
     document.getElementById('btn-login').addEventListener('click', function() {
-      lock.show({popup: true} , function(err, profile, token) {
+      lock.show(function(err, profile, token) {
         if (err) {
           // Error callback
           console.log("There was an error");
