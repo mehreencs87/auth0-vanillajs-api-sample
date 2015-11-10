@@ -1,7 +1,8 @@
 $(document).ready(function() {
     var lock = new Auth0Lock(
-        'BUIJSW9x60sIHBw8Kd9EmCbj8eDIFxDC',
-        'samples.auth0.com'
+        // These properties are set in auth0-variables.js
+        AUTH0_CLIENT_ID,
+        AUTH0_DOMAIN
     );
 
     var userProfile;
