@@ -11,8 +11,8 @@ $(document).ready(function() {
       lock.show(function(err, profile, token) {
         if (err) {
           // Error callback
-          console.log("There was an error");
-          alert("There was an error logging in");
+          console.error("Something went wrong: ", err);
+          alert("Something went wrong, check the Console errors");
         } else {
           // Success calback
 
