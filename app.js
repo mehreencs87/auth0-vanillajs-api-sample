@@ -1,7 +1,8 @@
 $(document).ready(function() {
     var lock = new Auth0Lock(
-        'BUIJSW9x60sIHBw8Kd9EmCbj8eDIFxDC',
-        'samples.auth0.com'
+        // These properties are set in auth0-variables.js
+        AUTH0_CLIENT_ID,
+        AUTH0_DOMAIN
     );
 
     var userProfile;
@@ -10,8 +11,8 @@ $(document).ready(function() {
       lock.show(function(err, profile, token) {
         if (err) {
           // Error callback
-          console.log("There was an error");
-          alert("There was an error logging in");
+          console.error("Something went wrong: ", err);
+          alert("Something went wrong, check the Console errors");
         } else {
           // Success calback
 
