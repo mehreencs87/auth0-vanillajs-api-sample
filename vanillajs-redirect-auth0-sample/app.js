@@ -21,23 +21,23 @@ $(document).ready(function() {
             //save the token in the session:
             localStorage.setItem('id_token', hash.id_token);
         }
-			
-            //retrieve the profile:
-        var id_token = localStorage.getItem('id_token');
-        if (id_token) {
-            lock.getProfile(id_token, function (err, profile) {
-            if (err) {
-                return alert('There was an error geting the profile: ' + err.message);
-            }
-            document.getElementById('login-box').style.display = 'none';
-            document.getElementById('logged-in-box').style.display = 'inline';
-            document.getElementById('nick').textContent = profile.nickname;
-            	
-            });
-        	
+    }			
+     //retrieve the profile:
+    var id_token = localStorage.getItem('id_token');
+    if (id_token) {
+        lock.getProfile(id_token, function (err, profile) {
+        if (err) {
+            return alert('There was an error geting the profile: ' + err.message);
         }
-    	
+        document.getElementById('login-box').style.display = 'none';
+        document.getElementById('logged-in-box').style.display = 'inline';
+        document.getElementById('nick').textContent = profile.nickname;
+           	
+        });
+        	
     }
+    	
+    
 	  
     document.getElementById('btn-api').addEventListener('click', function() {
         // Just call your API here. The header will be sent
